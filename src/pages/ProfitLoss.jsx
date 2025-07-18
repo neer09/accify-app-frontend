@@ -11,7 +11,7 @@ export default function ProfitLoss() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/reports/profit-loss')
+    axios.get('https://accify-app-backend.onrender.com/api/reports/profit-loss')
       .then((res) => setData(res.data))
       .catch(console.error);
   }, []);
