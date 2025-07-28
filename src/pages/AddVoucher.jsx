@@ -43,7 +43,7 @@ export default function AddVoucher() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post('https://accify-app-backend.onrender.com/api/vouchers', form);
+      await axios.post('https://accify-app.onrender.com/api/vouchers', form);
       setMessage('✅ Voucher added successfully!');
       setStatus('success');
       setTimeout(() => {

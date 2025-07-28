@@ -39,7 +39,7 @@ export default function VoucherList() {
   const cancelRef = useRef();
 
   const fetchVouchers = () => {
-    axios.get('https://accify-app-backend.onrender.com/api/vouchers')
+    axios.get('https://accify-app.onrender.com/api/vouchers')
       .then((res) => {
         const data = res.data;
         setVouchers(data);
@@ -58,7 +58,7 @@ export default function VoucherList() {
 
   const confirmDelete = () => {
     if (!voucherToDelete) return;
-    axios.delete(`https://accify-app-backend.onrender.com/api/vouchers/${voucherToDelete.id}`)
+    axios.delete(`https://accify-app.onrender.com/api/vouchers/${voucherToDelete.id}`)
       .then(() => {
         toast({ title: 'Voucher deleted', status: 'success', duration: 2000 });
         fetchVouchers();
@@ -78,7 +78,7 @@ export default function VoucherList() {
   };
 
   const handleEditSubmit = () => {
-    axios.put(`https://accify-app-backend.onrender.com/api/vouchers/${selectedVoucher.id}`, selectedVoucher)
+    axios.put(`https://accify-app.onrender.com/api/vouchers/${selectedVoucher.id}`, selectedVoucher)
       .then(() => {
         toast({ title: 'Voucher updated', status: 'success', duration: 2000 });
         onClose();

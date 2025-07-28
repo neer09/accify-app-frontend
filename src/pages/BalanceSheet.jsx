@@ -11,7 +11,7 @@ export default function BalanceSheet() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('https://accify-app-backend.onrender.com/api/reports/balance-sheet')
+    axios.get('https://accify-app.onrender.com/api/reports/balance-sheet')
       .then((res) => setData(res.data))
       .catch(console.error);
   }, []);

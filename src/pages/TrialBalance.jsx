@@ -15,7 +15,7 @@ export default function TrialBalance() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await axios.get('https://accify-app-backend.onrender.com/api/reports/trial-balance');
+      const res = await axios.get('https://accify-app.onrender.com/api/reports/trial-balance');
       setData(res.data);
     } catch (err) {
       console.error('Failed to fetch trial balance', err);
