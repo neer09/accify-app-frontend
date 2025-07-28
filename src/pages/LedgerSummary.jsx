@@ -17,7 +17,7 @@ export default function LedgerSummary() {
     if (!account) return;
     setLoading(true);
     try {
-      const res = await axios.get(`https://accify-app-backend.onrender.com/api/ledgers/${account}`);
+      const res = await axios.get(`https://accify-app.onrender.com/api/ledgers/${account}`);
       setData(res.data);
     } catch (err) {
       console.error('Failed to fetch ledger summary', err);

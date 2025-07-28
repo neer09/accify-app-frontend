@@ -22,7 +22,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('https://accify-app-backend.onrender.com/api/users/login', {
+      const res = await axios.post('https://accify-app.onrender.com/api/users/login', {
         userName,
         password,
       });
