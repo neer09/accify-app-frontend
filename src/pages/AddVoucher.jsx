@@ -24,12 +24,13 @@ export default function AddVoucher() {
   const [form, setForm] = useState({
     date: new Date().toISOString().split('T')[0],
     voucherType: 'JOURNAL',
-    debitAccountType: '',
+    debitAccountType: 'CASH',    // default selected
     debitAmount: '',
-    creditAccountType: '',
+    creditAccountType: 'SALES',  // default selected
     creditAmount: '',
     remarks: '',
   });
+
 
   const [message, setMessage] = useState(null);
   const [status, setStatus] = useState('success');
